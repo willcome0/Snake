@@ -1,0 +1,90 @@
+Dependencies for Project 'NEW1', Target 'Target 1': (DO NOT MODIFY !)
+F (..\Scr\main.c)(0x5B76F0D3)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\oled.h)(0x5B76F0A3)
+I (..\Inc\key.h)(0x5B76EE3F)
+F (..\Scr\key.c)(0x5B76EE8F)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\key.o --omf_browse .\obj\key.crf --depend .\obj\key.d)
+I (..\Inc\key.h)(0x5B76EE3F)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\oled.h)(0x5B76F0A3)
+F (..\Scr\oled.c)(0x5B76EE61)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\oled.o --omf_browse .\obj\oled.crf --depend .\obj\oled.d)
+I (..\Inc\oled.h)(0x5B76F0A3)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\key.h)(0x5B76EE3F)
+I (..\Inc\oledfont.h)(0x5B4B771F)
+F (..\Drivers\gpio.c)(0x5B300A84)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\gpio.o --omf_browse .\obj\gpio.crf --depend .\obj\gpio.d)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\oled.h)(0x5B76F0A3)
+I (..\Inc\key.h)(0x5B76EE3F)
+F (..\Drivers\uart.c)(0x5B300A84)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\uart.o --omf_browse .\obj\uart.crf --depend .\obj\uart.d)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\oled.h)(0x5B76F0A3)
+I (..\Inc\key.h)(0x5B76EE3F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+F (..\Drivers\delay.c)(0x5B76ED6C)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\delay.o --omf_browse .\obj\delay.crf --depend .\obj\delay.d)
+I (..\Drivers\delay.h)(0x5B76EE3F)
+I (..\Inc\common.h)(0x5B76EE3F)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\gpio.h)(0x5B76EE3F)
+I (..\Drivers\uart.h)(0x5B76EE3C)
+I (..\Inc\oled.h)(0x5B76F0A3)
+I (..\Inc\key.h)(0x5B76EE3F)
+F (RTE\Device\SKEAZ128xxx4\startup_SKEAZ1284.s)(0x5B300A84)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "SKEAZ128xxx4 SETA 1"--list .\listings\startup_skeaz1284.lst --xref -o .\obj\startup_skeaz1284.o --depend .\obj\startup_skeaz1284.d)
+F (RTE\Device\SKEAZ128xxx4\system_SKEAZ1284.c)(0x5B300A84)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Drivers -I ..\Drivers\CMSIS -I ..\Scr\12.12_agine-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\Kinetis_KEAxx_DFP\1.3.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSKEAZ128xxx4-o .\obj\system_skeaz1284.o --omf_browse .\obj\system_skeaz1284.crf --depend .\obj\system_skeaz1284.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (..\Drivers\CMSIS\SKEAZ1284.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cm0plus.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmInstr.h)(0x5B300A84)
+I (..\Drivers\CMSIS\core_cmFunc.h)(0x5B300A84)
+I (..\Drivers\CMSIS\system_SKEAZ1284.h)(0x5B300A84)
