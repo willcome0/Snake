@@ -27,7 +27,7 @@ int fputc(int ch, FILE *f)
 //       baud:波特率：1200、2400、4800、9600、19200、115200
 //函数返回：无
 //===========================================================================
- void  UART_Init (uint8_t uartNo,uint32_t baud_rate)
+ void  UART_Init (uint8_t uartNo, uint32_t baud_rate)
 {
     //局部变量声明
     register uint16_t sbr;

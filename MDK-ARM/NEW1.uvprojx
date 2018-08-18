@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\Drivers;..\Drivers\CMSIS;..\Scr\12.12_agine</IncludePath>
+              <IncludePath>..\Inc;..\Drivers;..\Drivers\CMSIS;..\Snake</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -352,7 +352,7 @@
             <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>DEBUG</Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
@@ -398,6 +398,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>SNAKE</GroupName>
+          <Files>
+            <File>
+              <FileName>snake.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Snake\snake.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>DEVICE</GroupName>
           <Files>
             <File>
@@ -414,6 +424,16 @@
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>pit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\pit.c</FilePath>
+            </File>
+            <File>
+              <FileName>upper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\upper.c</FilePath>
             </File>
           </Files>
         </Group>

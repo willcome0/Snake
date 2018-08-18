@@ -98,7 +98,7 @@ void OLED_Init(void)
 	OLED_WR_Byte(0x30, Wirte_CMD); //[6:4] 000,0.65*vcc;001,0.77*vcc;011,0.83*vcc;
 
 	OLED_WR_Byte(0xA4, Wirte_CMD); //全局显示开启;bit0:1,开启;0,关闭;(白屏/黑屏)
-	OLED_WR_Byte(0xA6, Wirte_CMD); //设置显示方式;bit0:1,反相显示;0,正常显示
+	OLED_WR_Byte(0xA7, Wirte_CMD); //设置显示方式;bit0:1,反相显示;0,正常显示
 	OLED_WR_Byte(0xAF, Wirte_CMD); //开启显示
 	OLED_Clear();
 }
@@ -146,9 +146,10 @@ void OLED_Display_Off(void)
 //清屏函数，将显示显存全部清除
 void OLED_Clear(void)
 {
-	for(uint8_t i=0; i<8; i++)
-		for(uint8_t n=0; n<128; n++)
-			OLED_GRAM[n][i]=0X00;
+//	for(uint8_t i=0; i<8; i++)
+//		for(uint8_t n=0; n<128; n++)
+//			OLED_GRAM[n][i]=0X00;
+	memset(OLED_GRAM, 0, 1024);
 }
 //画点函数
 //x:0~127
