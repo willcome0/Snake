@@ -9,7 +9,7 @@ int main(void)
 	
 	g_Head[X] = 10;
 	g_Head[Y] = 10;
-			
+	Snake_ShowFood();
 	while ( 1 )
 	{
 //		OLED_Show_Str(30, 30, "HelloWorld!", 12, 1);

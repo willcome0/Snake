@@ -1,9 +1,12 @@
 #include "snake.h"
+#include<stdlib.h>
 
 uint32_t g_RunTime = 0;
 uint8_t g_PointerCoor[MAX_LENGTH][2] = {0};
 
 uint8_t g_Head[2] = {0};
+uint8_t g_Food[2] = {0};
+
 uint8_t g_NowDirect = 0;
 uint8_t g_Length = 2;
 
@@ -21,6 +24,39 @@ inline uint8_t GetKey(void)
 
 
 
+void Snake_ShowFood(void)
+{
+	enum food
+	{
+		foodOK = 0,
+		foorNO = 1
+	};
+	uint8_t foodFlag = 0;
+	uint8_t temp_x = 0;
+	uint8_t temp_y = 0;
+	int16_t index = g_RunTime%MAX_LENGTH;
+	
+	do
+	{
+		temp_x = rand()%SNAKE_X_MAX;
+		temp_y = rand()%SNAKE_Y_MAX;
+
+		foodFlag = foodOK;
+		for (uint8_t i=0; i<g_Length; i++)
+		{
+			if ( temp_x == g_PointerCoor[Last(index, i)][X] 
+				&& temp_y == g_PointerCoor[Last(index, i)][Y] )
+			{
+				foodFlag = foorNO;
+			}
+		}
+		
+	}while (foodFlag);
+	
+	g_Food[X] = temp_x;
+	g_Food[Y] = temp_y;
+	Snake_DrawPoint(g_Food[X], g_Food[Y], 1);
+}
 
 void Snake_Turn(void)
 {
@@ -49,15 +85,17 @@ void Snake_Turn(void)
 	}
 }
 
-#define Last(_index, _x) ((_index)<(_x) ? MAX_LENGTH-(_x)+(_index) : (_index)-(_x))
-void Snake_ShowBody(uint8_t *x, uint8_t *y, uint8_t mode, uint8_t length)
+
+void Snake_ShowBody(uint8_t x, uint8_t y, uint8_t mode, uint8_t length)
 {
 	int16_t index = g_RunTime%MAX_LENGTH;
-	g_PointerCoor[index][X] = *x;
-	g_PointerCoor[index][Y] = *y;
+	g_PointerCoor[index][X] = x;
+	g_PointerCoor[index][Y] = y;
 	
-	Snake_DrawPoint(&(g_PointerCoor[Last(index, 0)][X]), &(g_PointerCoor[Last(index, 0)][Y]), 1);
-	printf("DATA%2d  X:%3d\t Y:%3d \r\n", 0, g_PointerCoor[Last(g_RunTime%MAX_LENGTH, 0)][X], g_PointerCoor[Last(g_RunTime%MAX_LENGTH, 0)][Y]);
+	Snake_DrawPoint(g_PointerCoor[Last(index, 0)][X], g_PointerCoor[Last(index, 0)][Y], 1);
+//	printf("DATA%2d  X:%3d\t Y:%3d \r\n", 0, g_PointerCoor[Last(g_RunTime%MAX_LENGTH, 0)][X], g_PointerCoor[Last(g_RunTime%MAX_LENGTH, 0)][Y]);
+//	
+//	
 	for (uint8_t i=1; i<(length>g_RunTime?g_RunTime:length); i++)
 	{
 		printf("DATA%2d  X:%3d\t Y:%3d \r\n", i, g_PointerCoor[Last(g_RunTime%MAX_LENGTH, i)][X], g_PointerCoor[Last(g_RunTime%MAX_LENGTH, i)][Y]);
@@ -83,24 +121,17 @@ void Snake_ShowBody(uint8_t *x, uint8_t *y, uint8_t mode, uint8_t length)
 			return;
 		}
 
-		Snake_DrawPoint(&(g_PointerCoor[Last(index, i)][X]), &(g_PointerCoor[Last(index, i)][Y]), mode);
+		Snake_DrawPoint(g_PointerCoor[Last(index, i)][X], g_PointerCoor[Last(index, i)][Y], mode);
 		
 	}
 	
 }
 
-void Snake_DrawPoint(uint8_t *x, uint8_t *y, uint8_t mode)
+void Snake_DrawPoint(uint8_t x, uint8_t y, uint8_t mode)
 {
-//	/*防止坐标过小越界*/
-//	*x = *x<0 ? SNAKE_X_MAX-1 : *x;
-//	*y = *y<0 ? SNAKE_Y_MAX-1 : *y;
-//	
-//	/*防止坐标过大越界*/
-//	*x %= SNAKE_X_MAX;
-//	*y %= SNAKE_Y_MAX;
-	
-	uint8_t new_x = POINT_SIZE * (*x);
-	uint8_t new_y = POINT_SIZE * (*y);
+
+	uint8_t new_x = POINT_SIZE * x;
+	uint8_t new_y = POINT_SIZE * y;
 	
 	for ( uint8_t i=0; i<POINT_SIZE; i++ )
 		for ( uint8_t j=0; j<POINT_SIZE; j++ )
@@ -134,12 +165,18 @@ void PIT_CH0_IRQHandler(void)
 	
 	if ( g_NowDirect != 0 )
 	{
-		g_RunTime++;
+		
 		OLED_Clear();
-		Snake_ShowBody(&g_Head[X], &g_Head[Y], 1, 15);
+		Snake_ShowBody(g_Head[X], g_Head[Y], 1, g_Length);
+		Snake_DrawPoint(g_Food[X], g_Food[Y], 1);
+		if ( g_Head[X] == g_Food[X] && g_Head[Y] == g_Food[Y] )
+		{
+			Snake_ShowFood();
+			g_Length++;
+		}
 		
-//
-		
+
+		g_RunTime++;
 //		for(uint8_t i=0; i<20; i++)
 //			Variable[i] = g_PointerCoor[Last(g_RunTime%MAX_LENGTH, i)][X];
 //		Send_Begin();

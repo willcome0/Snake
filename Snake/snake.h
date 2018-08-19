@@ -12,6 +12,7 @@
 #define Y	1
 
 #define MAX_LENGTH	100
+#define Last(_index, _x) ((_index)<(_x) ? MAX_LENGTH-(_x)+(_index) : (_index)-(_x))
 
 extern uint32_t g_RunTime;
 extern uint8_t g_PointerCoor[MAX_LENGTH][2];
@@ -35,8 +36,8 @@ enum Direction
 
 
 void Snake_Turn(void);
-void Snake_ShowBody(uint8_t *x, uint8_t *y, uint8_t mode, uint8_t length);
-void Snake_DrawPoint(uint8_t *x, uint8_t *y, uint8_t mode);
+void Snake_ShowBody(uint8_t x, uint8_t y, uint8_t mode, uint8_t length);
+void Snake_DrawPoint(uint8_t x, uint8_t y, uint8_t mode);
 
 
 
